@@ -16,15 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Song.loadSamples(this)
-
         viewManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         val tmp = ArrayList<SampleInfo>()
         tmp.add(SampleInfo("intro", 2, 1f, Color.MAGENTA))
         tmp.add(SampleInfo("rep", 1, 2f, Color.YELLOW))
         viewAdapter = SampleAdapter(tmp, this)
-        Song.setSamples(tmp)
 
         recyclerView.apply {
             setHasFixedSize(true)

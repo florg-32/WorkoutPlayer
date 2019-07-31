@@ -11,13 +11,10 @@ class PlayerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
 
-        Song.loadSamples(this)
         val tmp = ArrayList<SampleInfo>()
         tmp.add(SampleInfo("intro", 2, 1f, Color.MAGENTA))
         tmp.add(SampleInfo("rep", 1, 2f, Color.YELLOW))
-        Song.setSamples(tmp)
 
-        play_button.setOnClickListener { Song.play() }
     }
 
 
